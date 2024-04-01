@@ -9,9 +9,18 @@
 4. `python main.py`
 
 ### 👉 Install with git
-Open the terminal:
-`git clone https://github.com/Khin-kun/TaskManager`
-Open folder:
-`cd nome_del_repository`
-Launch the main.py:
-`python main.py`
+
+1. Open the terminal:
+    ```bash
+    git clone https://github.com/Khin-kun/TaskManager.git
+    ```
+
+2. Open folder:
+    ```bash
+    cd nome_del_repository
+    ```
+
+3. Launch the main.py:
+    ```bash
+    python main.py
+    ```
