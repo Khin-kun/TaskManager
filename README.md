@@ -33,7 +33,7 @@
    cd Folder Path
      ```
 
-5. Launch the file:
+5. Launch the file
     ```bash
    python main.py
     ```
