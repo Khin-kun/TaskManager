@@ -5,10 +5,12 @@
 ### 👉 Install with github site
 1. Download the zip
 2. Extract folders to a folder of your choice
-3. ```bash
+3. Open folder
+  ```bash
      cd "Folder Path"
    ```
-4.```bash 
+4. Launch the fle
+   ```bash 
     python main.py
     ```
 
@@ -24,7 +26,7 @@
    cd Folder Path
      ```
 
-5. Launch the main.py:
+5. Launch the file:
     ```bash
    python main.py
     ```
