@@ -6,13 +6,13 @@
 1. Download the zip
 2. Extract folders to a folder of your choice
 3. Open folder
-  ```bash
-     cd "Folder Path"
-   ```
-4. Launch the fle
-   ```bash 
-    python main.py
+   ```bash
+      cd "Folder Path"
     ```
+4. Launch the fle
+    ```bash 
+      python main.py
+     ```
 
 ### 👉 Install with git
 
