@@ -5,16 +5,26 @@
 ### 👉 Install with github site
 1. Download the zip
 2. Extract folders to a folder of your choice
-3. ```bash cd "Folder Path"```
-4.```bash python main.py```
+3. ```bash
+     cd "Folder Path"
+   ```
+4.```bash 
+    python main.py
+    ```
 
 ### 👉 Install with git
 
 1. Open the terminal:
-    ```bash git clone https://github.com/Khin-kun/TaskManager.git ```
+    ```bash
+    git clone https://github.com/Khin-kun/TaskManager.git
+    ```
 
-2. Open folder:
-    ```bash cd Folder Path ```
+3. Open folder:
+    ```bash
+   cd Folder Path
+     ```
 
-3. Launch the main.py:
-    ```bash python main.py ```
+5. Launch the main.py:
+    ```bash
+   python main.py
+    ```
