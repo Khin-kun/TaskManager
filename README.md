@@ -1,4 +1,4 @@
-![Immagine](https://cdn.discordapp.com/attachments/827108551117635605/1224398698432168007/image.png?ex=661d5925&is=660ae425&hm=31a210559e2ec2144e7d2db5eef1d64f610222cef45d7dc37ef22f4af01137cc&)
+![Immagine](https://cdn.discordapp.com/attachments/827108551117635605/1224408048450404545/image.png?ex=661d61db&is=660aecdb&hm=afa1063352316d3985a89f5c5ae49562f61266d29f1fbc2fe94bcdf69c386f5a&)
 ### ⚠️Requirements⚠️ <br>
   - Have [Python](https://www.python.org/downloads/) >= 3.12 in your pc
   - Install the library in the terminal
