@@ -8,29 +8,29 @@ class TaskManager:
         self.master.geometry("400x420")
         self.master.config(bg="#f0f0f0")      
         self.tasks = []        
-        self.task_label = tk.Label(self.master, text="Aggiungi attività:", bg="#f0f0f0", font=("Helvetica", 12))
+        self.task_label = tk.Label(self.master, text="Add Task:", bg="#f0f0f0", font=("Helvetica", 12))
         self.task_label.pack(pady=5)       
         self.task_entry = tk.Entry(self.master, width=30, font=("Helvetica", 12))
         self.task_entry.pack(pady=5)        
-        self.status_options = ["Completo", "In corso", "Abbandonato"]       
+        self.status_options = ["Complete", "In Progress", "Abandoned"]       
         self.status_frame = tk.Frame(self.master, bg="#f0f0f0")
         self.status_frame.pack(pady=5)        
-        self.status_label = tk.Label(self.status_frame, text="Seleziona lo stato:", bg="#f0f0f0")
+        self.status_label = tk.Label(self.status_frame, text="Select Status:", bg="#f0f0f0")
         self.status_label.grid(row=0, column=0, padx=5, pady=5) 
         self.status_var = tk.StringVar(self.master)
         self.status_var.set(self.status_options[0])  
         self.status_menu = tk.OptionMenu(self.status_frame, self.status_var, *self.status_options)
         self.status_menu.config(font=("Helvetica", 10))
         self.status_menu.grid(row=0, column=1, padx=5, pady=5)     
-        self.add_button = tk.Button(self.master, text="Aggiungi attività", command=self.add_task, bg="#4caf50", fg="white", relief=tk.FLAT, font=("Helvetica", 10))
+        self.add_button = tk.Button(self.master, text="Add Task", command=self.add_task, bg="#4caf50", fg="white", relief=tk.FLAT, font=("Helvetica", 10))
         self.add_button.pack(pady=5)  
         self.task_list = tk.Listbox(self.master, width=40, font=("Helvetica", 12), selectbackground="#a5d8ff")
         self.task_list.pack(pady=10)    
         self.button_frame = tk.Frame(self.master, bg="#f0f0f0")
         self.button_frame.pack(pady=5)   
-        self.complete_button = tk.Button(self.button_frame, text="Aggiorna stato", command=self.update_status, bg="#ffc107", fg="black", relief=tk.FLAT, font=("Helvetica", 10))
+        self.complete_button = tk.Button(self.button_frame, text="Update Status", command=self.update_status, bg="#ffc107", fg="black", relief=tk.FLAT, font=("Helvetica", 10))
         self.complete_button.grid(row=0, column=0, padx=5, pady=5)  
-        self.delete_button = tk.Button(self.button_frame, text="Elimina", command=self.delete_task, bg="#ff0000", fg="white", relief=tk.FLAT, font=("Helvetica", 10))
+        self.delete_button = tk.Button(self.button_frame, text="Delete", command=self.delete_task, bg="#ff0000", fg="white", relief=tk.FLAT, font=("Helvetica", 10))
         self.delete_button.grid(row=0, column=1, padx=5, pady=5)   
         self.load_tasks()
         self.task_list.bind("<Button-3>", self.update_status_rightclick)
@@ -45,7 +45,7 @@ class TaskManager:
             self.task_entry.delete(0, tk.END)
             self.save_tasks()
         else:
-            messagebox.showwarning("Attenzione", "Inserire un'attività!")
+            messagebox.showwarning("Warning", "Enter a task!")
     
     def update_status(self):
         try:
@@ -54,7 +54,7 @@ class TaskManager:
             self.tasks[selected_task_index] = (self.tasks[selected_task_index][0], status)
             self.update_task_list()
         except IndexError:
-            messagebox.showwarning("Attenzione", "Selezionare un'attività da aggiornare!")
+            messagebox.showwarning("Warning", "Select a task to update!")
 
     def delete_task(self):
         try:
@@ -63,7 +63,7 @@ class TaskManager:
             del self.tasks[selected_task_index]
             self.save_tasks()
         except IndexError:
-            messagebox.showwarning("Attenzione", "Selezionare un'attività da eliminare!")
+            messagebox.showwarning("Warning", "Select a task to delete!")
     
     def update_status_rightclick(self, event):
         try:
@@ -83,11 +83,11 @@ class TaskManager:
     def update_task_list(self):
         self.task_list.delete(0, tk.END)
         for task, status in self.tasks:
-            if status == "Completo":
+            if status == "Complete":
                 bg_color = "light green"
-            elif status == "In corso":
+            elif status == "In Progress":
                 bg_color = "yellow"
-            elif status == "Abbandonato":
+            elif status == "Abandoned":
                 bg_color = "light gray"
             self.task_list.insert(tk.END, task)
             self.task_list.itemconfig(tk.END, {'bg': bg_color})
